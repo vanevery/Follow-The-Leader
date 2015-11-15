@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+	
+	var socket = io.connect();
+	var otherwindow = null;
+
+	socket.on('connect', function() {
+		console.log("Connected");
+
+		//socket.emit('hello',"blah blahb blah");
+		//console.log("sent hello");
+
+	});
+
+	socket.on('url',function(data) {
+		//document.getElementById('theframe').src=data;
+		if (otherwindow != null) {
+			otherwindow.location.assign(data);
+		} else {
+			otherwindow = window.open(data);
+		}
+	});	
+
+	function init() {
+		document.getElementById('url').addEventListener('change', function() {
+			socket.emit('url',document.getElementById('url').value);
+		});
+
+
+	}
+
+	window.addEventListener('load', init);
+</script>
+	</head>
+
+
+<body>
+	<div>
+		<input type="text" name="url" id="url" value="" />
+	</div>
+
+</body>
+
+</html>
+

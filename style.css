@@ -1,0 +1,31 @@
+A:link { text-decoration: underline; }
+A:active { text-decoration: underline; }
+A:visited { text-decoration: underline; }
+
+A {
+    font-family: arial, helvetica, non-serif;
+    font-size: 9pt;
+    color: #0909AA;    
+	background-color: #EEEEEE;
+}
+
+H1 {
+    text-transform: uppercase;
+}
+
+H2 {
+    text-transform: uppercase;
+}
+
+H3 {
+    text-transform: uppercase;
+}
+
+
+BODY 
+{
+    font-family: arial, helvetica, non-serif;
+    font-size: 9pt;
+    color: #050505;    
+	background-color: #EEEEEE;
+}
